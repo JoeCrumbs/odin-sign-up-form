@@ -73,7 +73,7 @@ body {
   color: #030303;
   background: #F9FAFB;
   font-family: Helvetica, Arial, sans-serif, system-ui;
-  padding: var(--medium-spacing) max(var(--medium-spacing), calc((100% - 1290px) / 2));
+  padding: var(--medium-spacing) 0 var(--medium-spacing) max(var(--medium-spacing), calc((100% - 1290px) / 2));
 }
 
 a {
@@ -136,7 +136,8 @@ form {
   border-radius: 5px;
   padding: var(--medium-spacing);
   margin-left:var(--medium-spacing);
-  width: calc(100% - var(--medium-spacing));
+  margin-right: max(var(--medium-spacing), calc((100% - 1290px) / 2));
+  width: calc(100% - var(--large-spacing));
 
   p {
     color: var(--secondary-text-color);
@@ -220,5 +221,9 @@ form {
 @media only screen and (max-width: 700px) {
   .background {
     display:none;
+  }
+
+  body {
+    padding-left: 0;
   }
 }
