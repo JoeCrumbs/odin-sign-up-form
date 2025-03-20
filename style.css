@@ -100,7 +100,7 @@ h1 {
 }
 
 h1, .form-submit {
-  padding: var(--medium-spacing) 0 var(--medium-spacing) var(--large-spacing);
+  padding: var(--medium-spacing);
   max-width: 860px;
   width: 100%;
   a {
