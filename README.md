@@ -1,4 +1,4 @@
-# landing-page
+# Sign-up Form
 
 ## Assignment ([The Odin Project Challenge Nr.6](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form))
 
