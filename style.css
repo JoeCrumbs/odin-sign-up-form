@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
   --secondary-text-color: #545C67;
   --small-spacing: 10px;
   --medium-spacing: 25px;
-  --large-spacing: 50px;
+  --large-spacing: 50px; /* large spacing has to be double of medium-spacing in order to preserve layout */
 }
 
 body {
@@ -73,6 +73,7 @@ body {
   color: #030303;
   background: #F9FAFB;
   font-family: Helvetica, Arial, sans-serif, system-ui;
+  padding: var(--medium-spacing) max(var(--medium-spacing), calc((100% - 1290px) / 2));
 }
 
 a {
@@ -81,8 +82,7 @@ a {
 
 main {
   flex: 2;
-  height: calc(100vh - (var(--medium-spacing) * 2));
-  margin: var(--medium-spacing) 0;
+  height: calc(100vh - var(--large-spacing));
   overflow-y: auto;
 }
 
@@ -100,7 +100,7 @@ h1 {
 }
 
 h1, .form-submit {
-  padding: var(--medium-spacing);
+  padding: var(--medium-spacing) 0 var(--medium-spacing) var(--large-spacing);
   max-width: 860px;
   width: 100%;
   a {
@@ -135,8 +135,8 @@ form {
   box-shadow: var(--shadow-color) 5px 5px 5px;
   border-radius: 5px;
   padding: var(--medium-spacing);
-  margin: 0 var(--medium-spacing);
-  width: calc(100% - var(--large-spacing));
+  margin-left:var(--medium-spacing);
+  width: calc(100% - var(--medium-spacing));
 
   p {
     color: var(--secondary-text-color);
@@ -192,7 +192,6 @@ form {
   font-size: 5rem;
   height: calc(100vh - var(--large-spacing));
   border-radius: 5px;
-  margin: var(--medium-spacing) 0 var(--medium-spacing) max(var(--medium-spacing), calc((100% - 1290px) / 2));
   & .logo {
       margin-top: calc(100vh / 4);
       padding: var(--small-spacing);
