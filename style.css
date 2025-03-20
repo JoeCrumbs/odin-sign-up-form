@@ -81,8 +81,8 @@ a {
 
 main {
   flex: 2;
-  height: 100vh;
-  padding-top: var(--medium-spacing);
+  height: calc(100vh - (var(--medium-spacing) * 2));
+  margin: var(--medium-spacing) 0;
   overflow-y: auto;
 }
 
