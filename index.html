@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign-Up Page</title>
+</head>
+<body>
+    <div class="background">
+        <div class="logo"><img src="images/odin-lined.png" alt="Logo of the Odin Project">ODIN</div>
+        <div class="background-footer">Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com">Unsplash</a></div>
+    </div>
+    <main>
+        <h1>
+            This is not a real online service! You know you need something like this in your life to help you realize your
+            deepest dreams. Sign up <em>now</em> to get started.<br>
+            <span>You <em>know</em> you want to.</span>
+        </h1>
+        <div class="form">
+            <h2>Let's do this!</h2>
+            <p class="align-right">Required fields are followed by <span aria-label="required">*</span>.</p>
+            <form>
+                <div class="form-row">
+                    <label for="firstName">FIRST NAME*</label>
+                    <input type="text" name="first_name" id="firstName" required>
+                </div>
+                <div class="form-row">
+                    <label for="lastName">LAST NAME*</label>
+                    <input type="text" name="last_name" id="lastName" required>
+                </div>
+                <div class="form-row">
+                    <label for="email">EMAIL*</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="form-row">
+                    <label for="phone">PHONE NUMBER</label>
+                    <input type="tel" name="phone_number" id="phone">
+                </div>
+                <p aria-label="password-requirements">Your password needs to be a minimum of 8 characters long and contain at least one uppercase letter, one lowercase letter and a number.</p>
+                <div class="form-row">
+                    <label for="pwd">PASSWORD*</label>
+                    <input type="password" name="password" id="pwd" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d\w\W]{8,}$" required>
+                </div>
+                <div class="form-row">
+                    <label for="confirmPwd">CONFIRM PASSWORD*</label>
+                    <input type="password" name="password_confirmation" id="confirmPwd" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d\w\W]{8,}$" required>
+                </div>
+            </form>
+        </div>
+        <div class="form-submit">
+            <button type="submit">Create Account</button>
+            <p>Already have an account? <a href="#"><strong>Log in</strong></a></p>
+        </div>
+    </main>
+</body>
+</html>

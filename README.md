@@ -1,2 +1,34 @@
-# odin-sign-up-form
-Sign-Up Form (Project of The Odin Project)
+# landing-page
+
+## Assignment ([The Odin Project Challenge Nr.6](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form))
+
+> [!NOTE]
+> The following is just a copy of the instructions. You can take a look at my solution [here](https://joecrumbs.github.io/odin-sign-up-form).
+
+### Introduction
+
+This project is intended to give you a chance to flex some of the new items you've been absorbing over the past few lessons. This time it's a sign-up form for an imaginary service.
+
+### Assignment
+
+#### Step 1: Set up and planning
+
+1. [x] Set up your git repository (refer to past projects if you need a refresher).
+1. [x] Set up your HTML and CSS files with some dummy content, just to make sure you have everything linked correctly.
+1. [x] Download a full-resolution copy of [the design file](https://cdn.statically.io/gh/TheOdinProject/curriculum/afdbabfab03fbc34783c6b6f3920aba4a4d3b935/intermediate_html_css/forms/project_sign_up_form/imgs/sign-up-form.png), and get a general idea for how you're going to need to lay things out in your HTML document.
+
+#### Step 2: Gather assets
+
+1. [x] The design has a large background-image, so go find and download an image you want to use for that section. The one in the design can be found on [unsplash.com](https://unsplash.com/photos/25xggax4bSA), but feel free to select your own. Be sure to credit the creator of your image!
+1. [x] Pick an external font for the 'logo' section. We've used [Norse Bold](https://cdn.statically.io/gh/TheOdinProject/theodinproject/efdc2888072f409e687d31dc580595dbe4fe0ff4/app/assets/fonts/Norse-Bold.otf), but you can use any font you like.
+1. [x] For the image-sidebar, we've used this [Odin logo](https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png).
+
+#### Step 3: Some tips!
+
+1. [x] How you attack this project is mostly up to you, but it is wise to begin by scaffolding out the structure of the page, and then tackle the various sections one by one.
+1. [x] The area behind the "ODIN" logo is a div that has a dark, but semi-transparent background color. This enhances the readability of the text against the busy background image.
+1. [x] The color we've chosen for the 'Create Account' button is similar to tones found in the background image. Specifically, it is `#596D48`.
+1. [x] The inputs, by default have a very light border (`#E5E7EB`), but we’ve included 2 variations. For starters, the password inputs should have a red border if they contain an invalid password. This can be handled with the `:invalid` pseudo-class you've learned in the previous lesson.
+1. [x] The other variation is the selected input, which should have a blue border and subtle box-shadow. This can be done with the `:focus` pseudo-class you've learned about in an earlier lesson.
+1. [x] Do not worry about making your project look nice on mobile. Responsive design isn't covered until later in the curriculum.
+1. [x] Validating that the password fields match each other requires JavaScript. Using JavaScript to validate forms is covered in a future lesson. For now, just validate each field separately.

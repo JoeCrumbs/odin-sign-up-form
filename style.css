@@ -1,0 +1,225 @@
+@font-face {
+  font-family: 'Norse';
+  src: url('fonts/Norse-Bold.woff2') format('woff2'),
+      url('fonts/Norse-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*
+ CSS Reset from https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+:root {
+  --accent-color: #596D48;
+  --shadow-color: #DBDCDD;
+  --secondary-text-color: #545C67;
+  --small-spacing: 10px;
+  --medium-spacing: 25px;
+  --large-spacing: 50px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  color: #030303;
+  background: #F9FAFB;
+  font-family: Helvetica, Arial, sans-serif, system-ui;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  flex: 2;
+  height: 100vh;
+  padding-top: var(--medium-spacing);
+  overflow-y: auto;
+}
+
+h2 {
+  margin-bottom: var(--small-spacing);
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: 1.4rem;
+  & span {
+    display: block;
+    margin-top: var(--small-spacing);
+  }
+}
+
+h1, .form-submit {
+  padding: var(--medium-spacing);
+  max-width: 860px;
+  width: 100%;
+  a {
+    color: var(--accent-color);
+  }
+}
+
+button {
+  background: var(--accent-color);
+  border: none;
+  padding: var(--small-spacing) var(--large-spacing);
+  border-radius: 5px;
+  margin-bottom: var(--small-spacing);
+  color: white;
+  font-weight: bold;
+  box-shadow: 5px 5px 5px var(--shadow-color);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--medium-spacing);
+}
+
+.form {
+  background: white;
+  max-width: 835px;
+  box-shadow: var(--shadow-color) 5px 5px 5px;
+  border-radius: 5px;
+  padding: var(--medium-spacing);
+  margin: 0 var(--medium-spacing);
+  width: calc(100% - var(--large-spacing));
+
+  p {
+    color: var(--secondary-text-color);
+    font-size: 0.8rem;
+    margin-bottom: var(--small-spacing);
+    width: 100%
+  }
+
+  .align-right {
+    text-align: end;
+  }
+
+  p[aria-label=password-requirements] {
+    margin-bottom: calc(-1 * var(--small-spacing));
+  }
+}
+
+.form-row {
+  flex:1 1 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  input {
+      height: initial;
+      width: 100%;
+      border: #EDEEF1 solid 1px;
+      border-radius: 5px;
+  }
+  input:focus {
+    border-color: #6284E4;
+  }
+  input[type=password]:invalid {
+    border-color: #C03333;
+  }
+  label {
+    color: var(--secondary-text-color);
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+}
+
+.background {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background: no-repeat center / cover url("images/unsplash.jpg");
+  color: white;
+  min-width: 250px;
+  max-width: 430px;
+  font-size: 5rem;
+  height: calc(100vh - var(--large-spacing));
+  border-radius: 5px;
+  margin: var(--medium-spacing) 0 var(--medium-spacing) max(var(--medium-spacing), calc((100% - 1290px) / 2));
+  & .logo {
+      margin-top: calc(100vh / 4);
+      padding: var(--small-spacing);
+      font-family: 'Norse';
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+      background: rgba(0,0,0, .5)
+  }
+  & img {
+      height: 7rem
+  }
+  & .background-footer {
+      font-size: 0.8rem;
+      margin-bottom: var(--small-spacing);
+
+  }
+}
+
+.background-footer > a {
+  text-decoration: underline;
+  color: white;
+}
+
+@media only screen and (max-width: 700px) {
+  .background {
+    display:none;
+  }
+}
